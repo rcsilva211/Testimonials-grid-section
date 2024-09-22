@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 13px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin: auto 0;
+}
+
+p {
+  font-weight: 500;
+  font-size: calc(0.3rem + 0.5vw);
+}
+
+.container {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(3rem, 1fr));
+  grid-template-rows: repeat(2, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.4rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#daniel {
+  grid-column: 1 / 3;
+  background-color: hsl(263, 55%, 52%);
+}
+
+#jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+
+#daniel h1,
+#daniel h2,
+#daniel h3,
+#daniel p,
+#jonathan h1,
+#jonathan h2,
+#jonathan h3,
+#jonathan p,
+#patrick h1,
+#patrick h2,
+#patrick h3,
+#patrick p {
+  color: hsl(210, 46%, 95%);
+}
+
+#kira {
+  grid-column: 4;
+  grid-row: 1 / 3;
+}
+
+#patrick {
+  grid-column: 2 / 4;
+  background-color: hsl(219, 29%, 14%);
+}
+
+img {
+  border-radius: 50%;
+  width: 36px;
+  border: 3px solid #a775f1;
+}
+
+@media screen and (max-width: 426px) {
+  .container {
+    display: block;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
