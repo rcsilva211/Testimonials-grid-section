@@ -57,7 +57,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.4rem;
+  padding: 1.8rem;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
@@ -73,24 +73,53 @@ p {
 #daniel {
   grid-column: 1 / 3;
   background-color: hsl(263, 55%, 52%);
+  position: relative;
+  z-index: 0;
+}
+
+#daniel h1,
+#daniel h2,
+#daniel h3,
+#daniel p {
+  z-index: 2;
+}
+
+#quote {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  width: 130px;
+  border-radius: 0;
+  border: none;
+  z-index: 1;
 }
 
 #jonathan {
   background-color: hsl(217, 19%, 35%);
 }
 
-#daniel h1,
 #daniel h2,
-#daniel h3,
-#daniel p,
-#jonathan h1,
+#daniel p {
+  color: #a775f1;
+}
+
+#kira h2,
+#kira p,
 #jonathan h2,
-#jonathan h3,
 #jonathan p,
-#patrick h1,
 #patrick h2,
-#patrick h3,
-#patrick p {
+#patrick p,
+#jeanette h2,
+#jeanette p {
+  color: #bac5d3;
+}
+
+#daniel h1,
+#daniel h3,
+#jonathan h1,
+#jonathan h3,
+#patrick h1,
+#patrick h3 {
   color: hsl(210, 46%, 95%);
 }
 
@@ -112,7 +141,9 @@ img {
 
 @media screen and (max-width: 426px) {
   .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
   }
 }
 
